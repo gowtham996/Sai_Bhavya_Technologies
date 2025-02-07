@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Sai Bhavya Technologies</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* Reset and Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f4f6f9;
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #335eea;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        margin: 0 15px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #335eea;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 50px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        color: #222;
+      }
+
+      .hero span {
+        color: #335eea;
+      }
+
+      .hero p {
+        margin-top: 10px;
+        color: #555;
+        font-size: 18px;
+      }
+
+      /* About Us Section */
+      .about-section {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 50px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-section h2 {
+        color: #335eea;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .about-section p {
+        color: #333;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      /* Key Achievements */
+      .achievements-sec {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 50px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .achievements-sec h2 {
+        color: #335eea;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .achievements {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px;
+        text-align: center;
+      }
+      .achievements div {
+        background: #335eea;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+      }
+
+      /* Testimonials */
+      .testimonial {
+        background: #fff;
+        padding: 50px;
+        max-width: 1000px;
+        margin: 30px auto;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .testimonial h2 {
+        color: #335eea;
+        margin-bottom: 20px;
+      }
+
+      .testimonial p {
+        font-style: italic;
+        color: #555;
+      }
+
+      /* Contact Section */
+      .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        max-width: 1000px;
+        margin: 30px auto;
+        /* padding: 20px; */
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .contact-img {
+        width: 100px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* height: 10px */
+      }
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 50px;
+        /* margin-left: auto; */
+        width: 100%;
+      }
+
+      .contact-section h2 {
+        color: #335eea;
+        margin-bottom: 0px;
+        text-align: center;
+      }
+
+      .contact-info {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .contact-info p {
+        font-size: 18px;
+        color: #000;
+      }
+
+      /* Contact Form */
+      /* Contact Form */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 60%;
+        /* margin: 0 auto; */
+        align-items: flex-end;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 80%;
+      }
+
+      /* Prevent textarea from being resized */
+      .contact-form textarea {
+        resize: none;
+        height: 100px; /* Set a fixed height */
+      }
+
+      .btn {
+        padding: 12px;
+        font-size: 16px;
+        color: #fff;
+        background: #335eea;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 40%;
+        align-items: center;
+      }
+
+      .btn:hover {
+        background: #1e49d4;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #335eea;
+        color: #1642bb;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">About Us</div>
+      <div>
+        <a href="home.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>About <span>Sai Bhavya Technologies</span></h1>
+      <p>Empowering Innovation & Learning</p>
+    </section>
+
+    <!-- About Us Section -->
+    <div id="about" class="about-section" data-aos="fade-up">
+      <h2>Who We Are</h2>
+      <p>
+        At Sai Bhavya Technologies, our mission is to provide world-class IT
+        training and cutting-edge technology solutions.
+      </p>
+      <p>
+        We strive to bridge the gap between academia and industry, fostering
+        innovation and skill development.
+      </p>
+    </div>
+
+    <!-- Key Achievements -->
+    <div id="achievements" class="achievements-sec" data-aos="fade-up">
+      <h2>Key Achievements</h2>
+      <div class="achievements">
+        <div>10+ Years Experience</div>
+        <div>5000+ Students Trained</div>
+        <div>100+ Successful Projects</div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="testimonial" data-aos="fade-up">
+      <h2>Success Stories</h2>
+      <p>
+        "Sai Bhavya Technologies transformed my career with hands-on IT
+        training!" - John Doe
+      </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact" data-aos="fade-up">
+      <div id="img" class="contact-img">
+        <img src="images2.jpeg" alt="team-img" />
+      </div>
+      <div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <p>Email: consult@saibhavyatech.com</p>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

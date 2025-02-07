@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Key Offerings</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* Reset and Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f4f6f9;
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #335eea;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        margin: 0 15px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #335eea;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        color: #222;
+      }
+
+      .hero span {
+        color: #335eea;
+      }
+
+      .hero p {
+        margin-top: 10px;
+        color: #555;
+        font-size: 18px;
+      }
+
+      /* Sections */
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        background: #fff;
+        margin: 30px auto;
+        max-width: 1000px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .section:hover {
+        transform: translateY(-5px);
+      }
+
+      .text {
+        width: 50%;
+      }
+
+      .text h2 {
+        color: #335eea;
+        font-size: 26px;
+      }
+
+      .text p {
+        color: #333;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .image img {
+        width: 320px;
+        height: 180px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Button */
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 16px;
+        color: #fff;
+        background: #335eea;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #1e49d4;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #335eea;
+        color: #fff;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">IT Key Offerings</div>
+      <div>
+        <a href="home.html">Home</a>
+        <a href="#web-app">Web & App Development</a>
+        <a href="#cloud">Cloud & DevOps</a>
+        <a href="#cyber">Cybersecurity</a>
+        <a href="#ai">AI & Automation</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Our <span>IT Key Offerings</span></h1>
+      <p>Delivering Cutting-Edge IT Solutions for a Digital Future</p>
+    </section>
+
+    <!-- Web & App Development -->
+    <div id="web-app" class="section" data-aos="fade-up">
+      <div class="text">
+        <h2>Web & App Development</h2>
+        <p>
+          Building robust and scalable web and mobile applications tailored to
+          your business needs.
+        </p>
+        <button class="btn">Get a Quote</button>
+      </div>
+      <div class="image">
+        <img src="WEBapp.png" alt="Web App Development" />
+      </div>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div id="cloud" class="section" data-aos="fade-up">
+      <div class="text">
+        <h2>Cloud & DevOps Solutions</h2>
+        <p>
+          Optimizing cloud infrastructure and automating deployment for seamless
+          operations.
+        </p>
+        <button class="btn">Request Consultation</button>
+      </div>
+      <div class="image">
+        <img src="CloDEv.jpg" alt="Cloud & DevOps" />
+      </div>
+    </div>
+
+    <!-- Cybersecurity & IT Consulting -->
+    <div id="cyber" class="section" data-aos="fade-up">
+      <div class="text">
+        <h2>Cybersecurity & IT Consulting</h2>
+        <p>
+          Providing top-notch security solutions to protect your digital assets.
+        </p>
+        <button class="btn">Secure Your Business</button>
+      </div>
+      <div class="image">
+        <img src="CS.jpg" alt="Cybersecurity" />
+      </div>
+    </div>
+
+    <!-- AI & Automation -->
+    <div id="ai" class="section" data-aos="fade-up">
+      <div class="text">
+        <h2>AI & Automation Services</h2>
+        <p>
+          Leverage AI to streamline operations and enhance business efficiency.
+        </p>
+        <button class="btn">Explore AI Solutions</button>
+      </div>
+      <div class="image">
+        <img src="AIAuto.jpg" alt="AI & Automation" />
+      </div>
+    </div>
+
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
